@@ -83,7 +83,7 @@
 #define EJERCICIO_6 (5)   /* Escalera mecánica */
 
 /* Select a compilation choise	*/
-#define TEST (EJERCICIO_6)
+#define TEST (EJERCICIO_4)
 
 
 #define TICKRATE_1MS	(1)				/* 1000 ticks per second */
@@ -455,7 +455,6 @@ int main(void)
 	prefix_init(&statechart);
 	prefix_enter(&statechart);
 
-	/* LEDs toggle in main */
 	while (1) {
 		__WFI();
 

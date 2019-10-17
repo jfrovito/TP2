@@ -20,17 +20,17 @@
       </vertices>
     </regions>
     <regions xmi:id="_QFqVMO7PEemIZaPo2PWsPw" name="Aplicacion">
-      <vertices xsi:type="sgraph:State" xmi:id="_dpTgYO7PEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor detenido" incomingTransitions="_ffaQ8O7QEemIZaPo2PWsPw _nO7hYO7QEemIZaPo2PWsPw _oCDncO7QEemIZaPo2PWsPw">
+      <vertices xsi:type="sgraph:State" xmi:id="_dpTgYO7PEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor detenido" incomingTransitions="_ffaQ8O7QEemIZaPo2PWsPw _nO7hYO7QEemIZaPo2PWsPw _oCDncO7QEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_lf1iUO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC3]" target="_Gtt48O7QEemIZaPo2PWsPw"/>
         <outgoingTransitions xmi:id="_mLypYO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC2]" target="_D2OucO7QEemIZaPo2PWsPw"/>
       </vertices>
       <vertices xsi:type="sgraph:Entry" xmi:id="_gfdOIO7PEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_oCDncO7QEemIZaPo2PWsPw" specification="" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_D2OucO7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor abierto" incomingTransitions="_mLypYO7QEemIZaPo2PWsPw">
+      <vertices xsi:type="sgraph:State" xmi:id="_D2OucO7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor abierto" incomingTransitions="_mLypYO7QEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_nO7hYO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC3]" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_Gtt48O7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor cerrando" incomingTransitions="_lf1iUO7QEemIZaPo2PWsPw">
+      <vertices xsi:type="sgraph:State" xmi:id="_Gtt48O7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor cerrando" incomingTransitions="_lf1iUO7QEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_ffaQ8O7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC4]" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
     </regions>
