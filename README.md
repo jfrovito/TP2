@@ -6,7 +6,9 @@
 
 Objetivo:
 • Uso del IDE (edición, compilación y depuración de programas).
+
 • Uso de GPIO & Diagrama de Estado (manejo de Salidas y de Entradas Digitales en Aplicaciones).
+
 • Documentar lo que se solicita en c/ítems.
 
 ## Uso de Yakindu
