@@ -84,7 +84,7 @@
 #define EJERCICIO_6 (6)   /* Escalera mecánica */
 
 /* Select a compilation choise	*/
-#define TEST (EJERCICIO_5)
+#define TEST (EJERCICIO_6)
 
 
 #define TICKRATE_1MS	(1)				/* 1000 ticks per second */
