@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_IPEiAI_CEeaE_NItBGtDFQ" specification="/* Puerta corrediza */&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#xD;&#xA;in event evTECXOprimido : integer&#xD;&#xA;in event evTECXNoOprimido&#xD;&#xA;&#xD;&#xA;operation opLED(LEDNumber:integer,&#xD;&#xA;&#x9;State:boolean): void&#xD;&#xA;&#xD;&#xA;//const LEDR: integer = 0&#xD;&#xA;//const LEDG: integer = 1&#xD;&#xA;//const LEDB: integer = 2&#xD;&#xA;//El LED1 es motor detenido&#xD;&#xA;const LED1: integer = 3&#xD;&#xA;//El LED2 es motor abiendo puerta&#xD;&#xA;const LED2: integer = 4&#xD;&#xA;//El LED3 es motor cerrando puerta&#xD;&#xA;const LED3: integer = 5&#xD;&#xA;&#xD;&#xA;const LED_ON: boolean = false&#xD;&#xA;const LED_OFF: boolean = true&#xD;&#xA;&#xD;&#xA;//TEC2 indica sensor de presencia&#xD;&#xA;const TEC2: integer = 1 &lt;&lt;1&#xD;&#xA;//TEC3 indica FC abierto&#xD;&#xA;const TEC3: integer = 1 &lt;&lt;2&#xD;&#xA;//TEC4 indica FC cerrado&#xD;&#xA;const TEC4: integer = 1 &lt;&lt;3&#xD;&#xA;&#xD;&#xA;internal:&#xD;&#xA;&#xD;&#xA;event siTitilarLED&#xD;&#xA;event siNoTitilarLED&#xD;&#xA;event siTECXOK&#xD;&#xA;&#xD;&#xA;var viTecla: integer" name="prefix">
+  <sgraph:Statechart xmi:id="_IPEiAI_CEeaE_NItBGtDFQ" specification="/* Puerta corrediza */&#xD;&#xA;&#xD;&#xA;interface:&#xD;&#xA;&#xD;&#xA;in event evTECXOprimido : integer&#xD;&#xA;in event evTECXNoOprimido&#xD;&#xA;&#xD;&#xA;operation opLED(LEDNumber:integer,&#xD;&#xA;&#x9;State:boolean): void&#xD;&#xA;&#xD;&#xA;//const LEDR: integer = 0&#xD;&#xA;//const LEDG: integer = 1&#xD;&#xA;//const LEDB: integer = 2&#xD;&#xA;//El LED1 es motor detenido&#xD;&#xA;const LED1: integer = 3&#xD;&#xA;//El LED2 es motor abiendo puerta&#xD;&#xA;const LED2: integer = 4&#xD;&#xA;//El LED3 es motor cerrando puerta&#xD;&#xA;const LED3: integer = 5&#xD;&#xA;&#xD;&#xA;const LED_ON: boolean = true&#xD;&#xA;const LED_OFF: boolean = false&#xD;&#xA;&#xD;&#xA;//TEC1 indica sensor de presencia on&#xD;&#xA;const TEC1: integer = 1 &lt;&lt;0&#xD;&#xA;//TEC2 indica sensor de presencia off&#xD;&#xA;const TEC2: integer = 1 &lt;&lt;1&#xD;&#xA;//TEC3 indica FC abierto&#xD;&#xA;const TEC3: integer = 1 &lt;&lt;2&#xD;&#xA;//TEC4 indica FC cerrado&#xD;&#xA;const TEC4: integer = 1 &lt;&lt;3&#xD;&#xA;&#xD;&#xA;internal:&#xD;&#xA;&#xD;&#xA;event siTitilarLED&#xD;&#xA;event siNoTitilarLED&#xD;&#xA;event siTECXOK&#xD;&#xA;&#xD;&#xA;var viTecla: integer" name="prefix">
     <regions xmi:id="_ECq5w0fOEeeJU45vckolSA" name="TECX">
       <vertices xsi:type="sgraph:State" xmi:id="_ECq5xEfOEeeJU45vckolSA" specification="" name="DEBOUNCE" incomingTransitions="_ECxAIUfOEeeJU45vckolSA">
         <outgoingTransitions xmi:id="_ECq5xkfOEeeJU45vckolSA" specification="after 50 ms" target="_ECxAOUfOEeeJU45vckolSA"/>
@@ -20,17 +20,17 @@
       </vertices>
     </regions>
     <regions xmi:id="_QFqVMO7PEemIZaPo2PWsPw" name="Aplicacion">
-      <vertices xsi:type="sgraph:State" xmi:id="_dpTgYO7PEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor detenido" incomingTransitions="_ffaQ8O7QEemIZaPo2PWsPw _nO7hYO7QEemIZaPo2PWsPw _oCDncO7QEemIZaPo2PWsPw">
-        <outgoingTransitions xmi:id="_lf1iUO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC3]" target="_Gtt48O7QEemIZaPo2PWsPw"/>
-        <outgoingTransitions xmi:id="_mLypYO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC2]" target="_D2OucO7QEemIZaPo2PWsPw"/>
+      <vertices xsi:type="sgraph:State" xmi:id="_dpTgYO7PEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor detenido" incomingTransitions="_ffaQ8O7QEemIZaPo2PWsPw _nO7hYO7QEemIZaPo2PWsPw _oCDncO7QEemIZaPo2PWsPw">
+        <outgoingTransitions xmi:id="_lf1iUO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC2]" target="_Gtt48O7QEemIZaPo2PWsPw"/>
+        <outgoingTransitions xmi:id="_mLypYO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC1]" target="_D2OucO7QEemIZaPo2PWsPw"/>
       </vertices>
       <vertices xsi:type="sgraph:Entry" xmi:id="_gfdOIO7PEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_oCDncO7QEemIZaPo2PWsPw" specification="" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_D2OucO7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor abierto" incomingTransitions="_mLypYO7QEemIZaPo2PWsPw">
+      <vertices xsi:type="sgraph:State" xmi:id="_D2OucO7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor abierto" incomingTransitions="_mLypYO7QEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_nO7hYO7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC3]" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
-      <vertices xsi:type="sgraph:State" xmi:id="_Gtt48O7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_ON)&#xD;&#xA;entry / opLED(LED2,LED_ON)&#xD;&#xA;entry / opLED(LED3,LED_OFF)" name="Motor cerrando" incomingTransitions="_lf1iUO7QEemIZaPo2PWsPw">
+      <vertices xsi:type="sgraph:State" xmi:id="_Gtt48O7QEemIZaPo2PWsPw" specification="entry / opLED(LED1,LED_OFF)&#xD;&#xA;entry / opLED(LED2,LED_OFF)&#xD;&#xA;entry / opLED(LED3,LED_ON)" name="Motor cerrando" incomingTransitions="_lf1iUO7QEemIZaPo2PWsPw">
         <outgoingTransitions xmi:id="_ffaQ8O7QEemIZaPo2PWsPw" specification="siTECXOK [viTecla == TEC4]" target="_dpTgYO7PEemIZaPo2PWsPw"/>
       </vertices>
     </regions>
